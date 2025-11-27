@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import CourseCard from '../components/CourseCard';
+import { API_ENDPOINTS } from '../config/api';
 import './Courses.css';
 
 function Courses() {
@@ -7,7 +8,7 @@ function Courses() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('http://localhost:8000/api/courses/')
+        fetch(API_ENDPOINTS.courses)
             .then(response => response.json())
             .then(data => {
                 setCourses(data.modules);

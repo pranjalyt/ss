@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import ExpandablePanel from '../components/ExpandablePanel';
+import { API_ENDPOINTS } from '../config/api';
 import './Syllabus.css';
 
 function Syllabus() {
@@ -7,7 +8,7 @@ function Syllabus() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('http://localhost:8000/api/courses/')
+        fetch(API_ENDPOINTS.courses)
             .then(response => response.json())
             .then(data => {
                 setCourses(data.modules);

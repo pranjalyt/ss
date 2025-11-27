@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { API_ENDPOINTS } from '../config/api';
 import './ContactForm.css';
 
 function ContactForm() {
@@ -30,7 +31,7 @@ function ContactForm() {
         setStatus({ type: '', message: '' });
 
         try {
-            const response = await fetch('http://localhost:8000/api/contact/', {
+            const response = await fetch(API_ENDPOINTS.contact, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
