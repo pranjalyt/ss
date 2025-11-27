@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import CourseCard from '../components/CourseCard';
-import { API_ENDPOINTS } from '../config/api';
+import { coursesData } from '../data/coursesData';
 import './Courses.css';
 
 function Courses() {
@@ -8,16 +8,11 @@ function Courses() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch(API_ENDPOINTS.courses)
-            .then(response => response.json())
-            .then(data => {
-                setCourses(data.modules);
-                setLoading(false);
-            })
-            .catch(error => {
-                console.error('Error fetching courses:', error);
-                setLoading(false);
-            });
+        // Simulate a brief loading state for smooth UX
+        setTimeout(() => {
+            setCourses(coursesData);
+            setLoading(false);
+        }, 100);
     }, []);
 
     if (loading) {

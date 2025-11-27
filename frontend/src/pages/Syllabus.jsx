@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import ExpandablePanel from '../components/ExpandablePanel';
-import { API_ENDPOINTS } from '../config/api';
+import { coursesData } from '../data/coursesData';
 import './Syllabus.css';
 
 function Syllabus() {
@@ -8,16 +8,11 @@ function Syllabus() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch(API_ENDPOINTS.courses)
-            .then(response => response.json())
-            .then(data => {
-                setCourses(data.modules);
-                setLoading(false);
-            })
-            .catch(error => {
-                console.error('Error fetching syllabus:', error);
-                setLoading(false);
-            });
+        // Simulate a brief loading state for smooth UX
+        setTimeout(() => {
+            setCourses(coursesData);
+            setLoading(false);
+        }, 100);
     }, []);
 
     if (loading) {

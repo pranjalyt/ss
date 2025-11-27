@@ -4,7 +4,6 @@ const API_BASE_URL = import.meta.env.PROD
     : 'http://localhost:8000'; // In development, use backend server
 
 export const API_ENDPOINTS = {
-    courses: `${API_BASE_URL}/api/courses/`,
     contact: `${API_BASE_URL}/api/contact/`,
 };
 
