@@ -1,0 +1,46 @@
+.course-highlights {
+    text-align: center;
+}
+
+.highlights-title {
+    font-size: var(--font-size-4xl);
+    font-weight: 800;
+    margin-bottom: var(--spacing-3xl);
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.highlight-card {
+    padding: var(--spacing-xl);
+    border: var(--border-width) solid var(--color-black);
+    text-align: left;
+    transition: all var(--transition-base);
+}
+
+.highlight-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 6px 6px 0 var(--color-black);
+}
+
+.highlight-title {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+}
+
+.highlight-description {
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .highlights-grid {
+        grid-template-columns: 1fr;
+    }
+}

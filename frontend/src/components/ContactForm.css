@@ -1,0 +1,33 @@
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-status {
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    border: var(--border-width) solid var(--color-black);
+    text-align: center;
+    font-weight: 500;
+}
+
+.form-status.success {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+.form-status.error {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border-color: var(--color-black);
+}
+
+.contact-form .btn {
+    width: 100%;
+    margin-top: var(--spacing-md);
+}
+
+.contact-form .btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}

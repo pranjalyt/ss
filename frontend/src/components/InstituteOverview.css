@@ -1,0 +1,65 @@
+.institute-overview {
+    text-align: center;
+}
+
+.overview-title {
+    font-size: var(--font-size-4xl);
+    font-weight: 800;
+    margin-bottom: var(--spacing-3xl);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-3xl);
+}
+
+.overview-item {
+    padding: var(--spacing-xl);
+    border: var(--border-width) solid var(--color-white);
+    transition: all var(--transition-base);
+}
+
+.overview-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 8px 8px 0 var(--color-white);
+}
+
+.overview-number {
+    font-size: var(--font-size-5xl);
+    font-weight: 800;
+    margin-bottom: var(--spacing-xs);
+    line-height: 1;
+}
+
+.overview-label {
+    font-size: var(--font-size-lg);
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.overview-description {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.overview-description p {
+    font-size: var(--font-size-lg);
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .overview-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+
+    .overview-number {
+        font-size: var(--font-size-4xl);
+    }
+}
